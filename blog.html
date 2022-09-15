@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center mt-5 text-primary">Blog!</h1>
+    <!-- blog -->
+    <section class="container mt-5">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>What is the difference between local storage and session storage?</strong>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>The read-only sessionStorage property accesses</strong> a session Storage object for the
+                        current origin.
+                        sessionStorage is similar to localStorage; the difference is that while data in localStorage
+                        doesn't expire, data in sessionStorage is cleared when the page session ends.
+
+                        Whenever a document is loaded in a particular tab in the browser, a unique page session gets
+                        created and assigned to that particular tab. That page session is valid only for that particular
+                        tab.
+                        A page session lasts as long as the tab or the browser is open, and survives over page reloads
+                        and restores.
+                        Opening a page in a new tab or window creates a new session with the value of the top-level
+                        browsing context, which differs from how session cookies work.
+                        Opening multiple tabs/windows with the same URL creates sessionStorage for each tab/window.
+                        Duplicating a tab copies the tab's sessionStorage into the new tab.
+                        Closing a tab/window ends the session and clears objects in sessionStorage.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>What is the difference between global scope and local scope?</strong>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Global scope —</strong> Global scope contains
+                        all of the things defined outside of all code blocks. A code block simply consists of grouped
+                        statements inside curly braces ({ }). if statement, loops, function are examples of structure
+                        that create a code block. A global variable has global scope. A global variable is accessible
+                        from anywhere in the code. <br>
+                        <strong>Local Scope —</strong> Local scope contains things defined inside code blocks. A local
+                        variable has local
+                        scope. A local variable is only accessible where it’s declared.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>How does javascript event loop work?</strong>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>The Event Loop</strong> has one simple job — to monitor the Call Stack and the Callback
+                        Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and
+                        will push it to the Call Stack, which effectively runs it.
+
+                        Such an iteration is called a tick in the Event Loop. Each event is just a function
+                        callback.While the Call Stack has functions to execute, the browser can’t do anything else —
+                        it’s being blocked. This means that the browser can’t render, it can’t run any other code, it’s
+                        just stuck. And here comes the problem — your app UI is no longer efficient and pleasing.In some
+                        cases, this might not be such a critical issue. But hey — here’s an even bigger problem. Once
+                        your browser starts processing too many tasks in the Call Stack, it may stop being responsive
+                        for a long time. At that point, a lot of browsers would take action by raising an error, asking
+                        whether they should terminate the page.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <strong>How many types undefined we get in javascript?</strong>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>We get undefined in many ways</strong><br>
+                        1. Variable that is not initialized will give undefined. <br>
+                        2. Function with no return . <br>
+                        3. Parameter that is not passed will be undefined. <br>
+                        4. If return has nothing on the right side will return undefined . <br>
+                        5. Property that doesn't exists on an object will give you undefined . <br>
+                        6. Accessing array elements outside of the index range . <br>
+                        7. Deleting an element inside an array . <br>
+                        8. Set a value directly to undefined . <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
